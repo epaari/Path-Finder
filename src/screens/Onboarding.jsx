@@ -13,7 +13,7 @@ export default function Onboarding() {
   const nav = useNavigate();
 
   const validName = name.trim().length >= 2;
-  const validGrade = ["8", "9", "10", "11", "12"].includes(grade);
+  const validGrade = ["9", "10", "11", "12"].includes(grade);
   const validMobile = /^\d{10}$/.test(mobile);
   const allValid = validName && validGrade && validMobile;
 
@@ -104,7 +104,7 @@ export default function Onboarding() {
           </label>
           <div className="mt-2 relative">
             <input
-              placeholder="Aisha R."
+              placeholder="Aisha"
               value={name}
               onChange={(e) => setName(e.target.value)}
               onBlur={() => setTouched((t) => ({ ...t, name: true }))}
@@ -113,7 +113,7 @@ export default function Onboarding() {
                   ? "border-green-300"
                   : "border-red-300"
                 : "border-gray-200"
-                } p-3 bg-white`}
+                } p-3 bg-white placeholder-gray-300`}
             />
             <div className="absolute right-3 top-3">
               {touched.name && (validName ? "✅" : "❌")}
@@ -140,30 +140,19 @@ export default function Onboarding() {
                 }`}
             >
               <option value="">Select grade</option>
-              <option value="8">8</option>
+
               <option value="9">9</option>
               <option value="10">10</option>
               <option value="11">11</option>
               <option value="12">12</option>
             </select>
-            <div className="relative group">
-              <button
-                type="button"
-                className="p-2 rounded-full bg-gray-100 text-gray-600"
-                aria-label="info"
-              >
-                ℹ️
-              </button>
-              <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-44 hidden group-hover:block bg-white border border-gray-200 rounded-md p-2 text-xs text-gray-700 shadow-sm">
-                Select current grade
-              </div>
-            </div>
+
           </div>
         </div>
 
         <div>
           <label className="block text-sm font-medium text-gray-700">
-            Mobile Number
+            Parent Mobile Number
           </label>
           <div className="mt-2 relative">
             <input
@@ -177,7 +166,7 @@ export default function Onboarding() {
                   ? "border-green-300"
                   : "border-red-300"
                 : "border-gray-200"
-                } p-3 bg-white`}
+                } p-3 bg-white placeholder-gray-300`}
             />
             <div className="absolute right-3 top-3">
               {touched.mobile && (validMobile ? "✅" : "❌")}

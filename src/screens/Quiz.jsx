@@ -47,7 +47,10 @@ export default function Quiz() {
     if (raw) {
       try {
         const parsed = JSON.parse(raw);
-        return parsed.current || 0;
+        // If the saved question order doesn't match current questions length, reset
+        if (parsed.questionOrder && parsed.questionOrder.length === QUESTIONS.length) {
+          return parsed.current || 0;
+        }
       } catch (err) { }
     }
     return 0;
@@ -58,7 +61,10 @@ export default function Quiz() {
     if (raw) {
       try {
         const parsed = JSON.parse(raw);
-        return parsed.answers || {};
+        // If the saved question order doesn't match current questions length, reset
+        if (parsed.questionOrder && parsed.questionOrder.length === QUESTIONS.length) {
+          return parsed.answers || {};
+        }
       } catch (err) { }
     }
     return {};

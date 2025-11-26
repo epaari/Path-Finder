@@ -63,3 +63,12 @@ When the user completes the answers and presses, Submit, I want to post the foll
 4. All [Question ID, Answer] pairs.
 
 Keep the google sheet id in a separate file in the root (credentials.md).
+
+## 2025-11-26
+
+Please remove the "info" button next to Grade in Onboarding screen.
+In "Select Grade" drop down options, remove 8.
+
+## 2025-11-26
+
+The sample name and phone number in "Student Name" and "Mobile Number" - Make them lighter.
