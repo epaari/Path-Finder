@@ -9,6 +9,7 @@ Path Finder is a career guidance application designed to help users discover the
 - **Progress Saving**: User progress and answers are automatically saved to local storage, allowing users to resume where they left off even if they go offline or refresh the page.
 - **Responsive Design**: Optimized for both desktop and mobile devices.
 - **Offline Support**: Detects network status and allows the quiz to continue offline, syncing when the connection is restored (simulated).
+- **RIASEC Scoring**: Automatically calculates the user's Holland Code (3-letter code) and provides a detailed score breakdown upon completion.
 
 ## Tech Stack
 
@@ -39,3 +40,4 @@ Path Finder is a career guidance application designed to help users discover the
 - **[2025-11-25] Question Logic**: Implemented a Fisher-Yates shuffle algorithm to randomize question order on initialization.
 - **[2025-11-25] Persistence**: Enhanced local storage logic to persist the specific randomized order of questions alongside user answers (`pf_quiz_answers_v2`).
 - **[2025-11-26] Streamlined Flow**: Removed the payment screen to allow direct access to the quiz from the onboarding page.
+- **[2025-11-26] Scoring Module**: Implemented robust RIASEC scoring logic with deterministic tie-breaking and detailed result calculation.
