@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 import { QUESTIONS } from "../data/questions";
 import { calculateRiasecScore } from "../utils/riasecScoring";
+import { submitToGoogleSheets } from "../utils/googleSheets";
 
 const OPTIONS = ["Yes", "No"];
 
@@ -118,6 +119,24 @@ export default function Quiz() {
 
       const result = calculateRiasecScore(userResponses, QUESTIONS);
       console.log("RIASEC Scoring Result:", JSON.stringify(result, null, 2));
+
+      // Submit to Google Sheets
+      const userDetailsRaw = localStorage.getItem("pf_user_details");
+      if (userDetailsRaw) {
+        try {
+          const userDetails = JSON.parse(userDetailsRaw);
+          const submissionData = {
+            ...userDetails,
+            answers: Object.entries(userResponses).map(([qid, val]) => ({
+              questionId: qid,
+              answer: val === 1 ? "Yes" : "No"
+            }))
+          };
+          submitToGoogleSheets(submissionData);
+        } catch (err) {
+          console.error("Failed to parse user details for submission", err);
+        }
+      }
 
       nav("/confirmation");
     }

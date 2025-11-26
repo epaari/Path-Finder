@@ -52,3 +52,14 @@ Implement it in sucha way that I will be able to switch between 10 and 60 easily
 I will test this manually.
 Update READMe.md
 Update prompts.md
+
+## 2025-11-26
+
+Please implement the following feature:
+When the user completes the answers and presses, Submit, I want to post the following data to the google sheet (ID = 11lvNrudMvB6PjcfoNa9cdn47wqlUpBK4wRE8TUjjPuE) through an App Script.
+1. Name
+2. Grade
+3. Phone Number
+4. All [Question ID, Answer] pairs.
+
+Keep the google sheet id in a separate file in the root (credentials.md).
