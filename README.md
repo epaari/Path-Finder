@@ -41,3 +41,4 @@ Path Finder is a career guidance application designed to help users discover the
 - **[2025-11-25] Persistence**: Enhanced local storage logic to persist the specific randomized order of questions alongside user answers (`pf_quiz_answers_v2`).
 - **[2025-11-26] Streamlined Flow**: Removed the payment screen to allow direct access to the quiz from the onboarding page.
 - **[2025-11-26] Scoring Module**: Implemented robust RIASEC scoring logic with deterministic tie-breaking and detailed result calculation.
+- **[2025-11-26] Testing Mode**: Added a `USE_SHORT_QUIZ` toggle in `src/data/questions.js` to enable a 10-question version for rapid testing.

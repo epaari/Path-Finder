@@ -44,3 +44,11 @@ Edge cases & validation:
 	If responses contains unknown question ids, ignore them but include a warning.
 	If questions mapping does not have exactly 10 items per code, still compute using available items but include a warning and compute percent using numItemsForThatCode (not assume 10).
 	If all responses are missing or invalid, return an error object with an explanatory message.
+
+## 2025-11-26
+
+For testing, temporarily change the code to display 10 questions. Once test is completed, I want to change it back to 60.
+Implement it in sucha way that I will be able to switch between 10 and 60 easily in future.
+I will test this manually.
+Update READMe.md
+Update prompts.md

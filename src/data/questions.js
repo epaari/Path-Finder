@@ -1,4 +1,7 @@
-export const QUESTIONS = [
+// Set to true to enable a short 10-question quiz for testing
+const USE_SHORT_QUIZ = true;
+
+const ALL_QUESTIONS = [
     { id: 1, code: "R", text: "I enjoy repairing small things at home like a toy or school projects." },
     { id: 2, code: "R", text: "I like assembling items by following steps, like setting up a small table or stand." },
     { id: 3, code: "R", text: "I enjoy learning how machines work, like mixer grinders or bicycles." },
@@ -60,3 +63,5 @@ export const QUESTIONS = [
     { id: 59, code: "C", text: "I enjoy keeping records of expenses or pocket money." },
     { id: 60, code: "C", text: "I like doing step-by-step tasks such as filing papers or arranging documents." },
 ];
+
+export const QUESTIONS = USE_SHORT_QUIZ ? ALL_QUESTIONS.slice(0, 10) : ALL_QUESTIONS;
