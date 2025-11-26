@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Onboarding from "./screens/Onboarding";
-import Payment from "./screens/Payment";
+
 import Quiz from "./screens/Quiz";
 import Confirmation from "./screens/Confirmation";
 
@@ -15,10 +15,7 @@ export default function App() {
               path="/"
               element={<Onboarding />}
             />
-            <Route
-              path="/payment"
-              element={<Payment />}
-            />
+
             <Route
               path="/quiz"
               element={<Quiz />}
