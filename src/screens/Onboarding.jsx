@@ -26,7 +26,7 @@ export default function Onboarding() {
             Beta
           </div>
         </div>
-        <p className="text-gray-600 italic">AI Powered Personal Career Guide</p>
+        <p className="text-gray-600 italic">AAI Powered Personal Career Guide</p>
         <div className="mt-2 w-full flex justify-start">
           <svg
             className="w-36 h-36"
